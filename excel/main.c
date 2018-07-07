@@ -179,12 +179,12 @@ struct student
     int judge5;
     int score;
     };
-//char bt[10];
+char bt[10];
 struct student s[100];
 FILE*fp1,*fp2;
 int i=0,j;
 fp1 =fopen("student1.csv","r");
-//char ch[10];
+char ch[10];
 if(fp1==NULL)
 {
     printf("error");
@@ -192,16 +192,85 @@ if(fp1==NULL)
 }
  else
 {
-    //fscanf(fp1,"[^\n]",&bt);
+    fscanf(fp1,"[^\n]",&bt);
     fscanf(fp1,"%*[^\n]%*c");
     while(!feof(fp1))
     {
         fscanf(fp1,"%d,%[^,],%[^,],%d,%[^,],%[^,],%d,%d,%d,%d,%d",&s[i].numbers,&s[i].name,&s[i].sex,&s[i].date of birth,&s[i].class,&s[i].phoneNumber,&s[i].judge1,&s[i].judge2,&s[i].judge3,&s[i].judge4,%s[i].judge5);
         i++;
     }
+    j=i;
+    for(i=o;i<j;i++)
+    {
+        printf("%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",s[i].number,s[i].name,s[i].sex,s[i].date of birth,s[i].class,s[i].phoneNumber,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5);
+        fclose(fp2);
+        
+    }
+    printf("%s",s[0].name);
+    fclose(fp1);
+    fp1 = fopen("student1.csv","r");
+    while(1)
+    {
+        fscanf(fp1,"%[^\n",&bt);
+        printf("%s",bt);
+        break;
+    }
+}
+j=i;
+int max[100],min[100];
+for(i=0;i<j;i++)
+{
+    max[i]=min[i]=s[i].judge1;
+}
+j=i;
+for(i=0;i<j;i++)
+{
+    if(s[i].judge2>max[i])max[i]=s[i].judge2;
+        if(s[i].judge3>max[i])max[i]=s[i].judge3;
+            if(s[i].judge4>max[i])max[i]=s[i].judge4;
+                if(s[i].judge5>max[i])max[i]=s[i].judge5;
+                    
+}
+j=i;
+for(i=0;i<j;i++)
+{
+    if(s[i].judge5>max[i])max[i]=s[i].judge5;
+}
+j=i;
+for(i=0;i<j;i++)
+{
+    if(s[i].judge2<min[i])min[i]=s[i].judge2;
+        if(s[i].judge3<min[i])min[i]=s[i].judge3;
+            if(s[i].judge4<min[i])min[i]=s[i].judge4;
+                if(s[i].judge5<min[i])min[i]=s[i].judge5;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 }
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 
 
 
