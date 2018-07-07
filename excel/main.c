@@ -243,6 +243,25 @@ for(i=0;i<j;i++)
         if(s[i].judge3<min[i])min[i]=s[i].judge3;
             if(s[i].judge4<min[i])min[i]=s[i].judge4;
                 if(s[i].judge5<min[i])min[i]=s[i].judge5;
+                    }
+j=i;
+for(i=0;i<j;i++)
+{
+    s[i].score=(s[i].judge1+s[i].judge2+s[i].judge3+s[i].judge4+s[i].judge5-max[i]-min[i]/3;
+                }
+                printf("%d",s[0].score);
+                j=i;
+                i=0;
+                fp2=fopen("student2.csv","w");
+                while(i<j)
+                {
+                    fprintf(fp2,"%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",s[i].number,s[i].name,s[i].sex,s[i].date of birth,s[i].class,s[i].phoneNumber,s[i].judge1,s[i].judge2,s[i].judge3,s[i].judge4,s[i].judge5,s[i].score)
+                    i++;
+                }
+                fclose(fp2);
+                
+                return 0;
+}
         
         
         
