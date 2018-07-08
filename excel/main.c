@@ -156,7 +156,6 @@ int main(int argc,const char * argv[])
         printf("%s \n%s\n",s1,s2);
     }
 }*/
-2018/07/06
 
 
 #include<iostream>
@@ -177,7 +176,8 @@ struct student
     int judge3;
     int judge4;
     int judge5;
-    int score;
+    int grade;
+    int average;
     };
 char bt[10];
 struct student s[100];
@@ -248,6 +248,7 @@ j=i;
 for(i=0;i<j;i++)
 {
     s[i].score=(s[i].judge1+s[i].judge2+s[i].judge3+s[i].judge4+s[i].judge5-max[i]-min[i]/3;
+    s[i].average=(s[i].judge1+s[i].judge2+s[i].judge3+s[i].judge4+s[i].judge5-max[i]-min[i])/3;
                 }
                 printf("%d",s[0].score);
                 j=i;
@@ -259,6 +260,10 @@ for(i=0;i<j;i++)
                     i++;
                 }
                 fclose(fp2);
+                if(a.grade!=b.grade)
+                return a.grade<b.grade;
+                
+                
                 
                 return 0;
 }
